@@ -43,8 +43,10 @@ export class EstoqueService {
       });
   }
 
-  updateProduto(produto): Observable<Produto> {
+  updateProduto(produto){
     return this.http.put(`${ESTOQUE_API}/produtos/` + produto.produto_id, produto)
-      .map(response => response.json());
+    .subscribe(result => {
+      console.log(result.json())
+    });
   }
 }
