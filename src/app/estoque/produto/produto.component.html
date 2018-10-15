@@ -1,0 +1,22 @@
+<!-- <a href="#">
+  <div class="list-group-item">
+    <span class="place-info-box-text">{{produto.nome}}</span>
+  </div>
+</a> -->
+
+<li class="list-group-item">
+ 
+  <span>Código Barras: {{produto.codigo_barra}}</span>
+  |
+  <span>Nome: {{produto.nome}}</span>
+  |
+  <span>Descrição: {{produto.descricao}}</span>
+  |
+  <span>Quantidade: {{produto.quantidade}}</span>
+  |
+  <span>Categoria: {{produto.categoria}}</span>
+  |
+  <span (click)="editClickMe()" class="glyphicon glyphicon-edit"></span>
+  <span (click)="onClickMe()" class="glyphicon glyphicon-trash" style="color: red;"></span>
+
+</li>

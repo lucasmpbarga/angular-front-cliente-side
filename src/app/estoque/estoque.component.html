@@ -1,0 +1,21 @@
+<mt-post-produto></mt-post-produto>
+
+<!-- INíCIO do CONTEÚDO -->
+<section class="content-header">
+  <h1>
+    Estoque
+  </h1>
+</section>
+
+
+<section class="content">
+
+  <div class="row">
+    <div *ngFor="let produto of produtos" class="list-group">
+      <mt-produto [produto]="produto">Carregando...</mt-produto>
+    </div>
+  </div>
+
+</section>
+
+<!-- FIM  do CONTEÚDO -->

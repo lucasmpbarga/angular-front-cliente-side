@@ -1,0 +1,41 @@
+<section class="content-header">
+  <h1>
+    Produto
+  </h1>
+</section>
+<div>
+
+  <div class="list-group-item">
+    <div>
+      <label>Código Barras: </label>
+      <input [(ngModel)]="produtoPost.codigo_barra" />
+    </div>
+    <div>
+      <label>Nome: </label>
+      <input [(ngModel)]="produtoPost.nome" style="margin-left: 50px;" />
+    </div>
+    <div>
+      <label>Descrição: </label>
+      <input [(ngModel)]="produtoPost.descricao" style="margin-left: 26px;" />
+    </div>
+    <div>
+      <label>Quantidade: </label>
+      <input [(ngModel)]="produtoPost.quantidade" style="margin-left: 13px;" />
+    </div>
+    <div>
+      <label>Categoria: </label>
+      <select [(ngModel)]="produtoPost.categoria_id" style="margin-left: 27px;">
+        <option disabled hidden [value]="selectUndefinedOptionValue"></option>
+        <option *ngFor="let categoria of categorias" value={{categoria.categoria_id}}>
+          {{categoria.nome}}
+        </option>
+      </select>
+    </div>
+    <div *ngIf="created">
+      <button (click)="postProduto()">Criar</button>
+    </div>
+    <div *ngIf="edited">
+      <button (click)="updateProduto()">Editar</button>
+    </div>
+  </div>
+</div>
