@@ -35,6 +35,7 @@ export class PostProdutoComponent implements OnInit {
 
   postProduto() {
     this.estoqueComponent.postProduto(this.produtoPost);
+    this.limpaCampos();
   }
 
   carryProduto(produto) {
